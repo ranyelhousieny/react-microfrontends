@@ -41,11 +41,6 @@ module.exports = {
           MFE1:
             'MFE1@http://localhost:8083/remoteEntry.js',
         },
-
-        exposes: {
-          './MFE2':
-            './src/bootstrap.js',
-        },
       }
     ),
     new HtmlWebpackPlugin({

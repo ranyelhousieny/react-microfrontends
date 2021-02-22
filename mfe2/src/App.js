@@ -2,6 +2,7 @@ import React from 'react';
 const MFE1_Button = React.lazy(
   () => import('MFE1/Button')
 );
+
 function App() {
   return (
     <div>
