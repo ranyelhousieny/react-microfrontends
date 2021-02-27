@@ -3,9 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 module.exports = {
   mode: 'production',
-  devServer: {
-    port: 8082,
-  },
+
   module: {
     rules: [
       {
