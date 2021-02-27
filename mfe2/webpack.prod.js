@@ -4,6 +4,23 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'production',
 
+  plugins: [
+    new ModuleFederationPlugin(
+      {
+        name: 'MFE2',
+        filename:
+          'remoteEntry.js',
+        remotes: {
+          MFE1:
+            'MFE1@s3://rany.tk/mfe/mfe1/dist/remoteEntry.js',
+        },
+      }
+    ),
+    new HtmlWebpackPlugin({
+      template:
+        './public/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -28,22 +45,4 @@ module.exports = {
       },
     ],
   },
-
-  plugins: [
-    new ModuleFederationPlugin(
-      {
-        name: 'MFE2',
-        filename:
-          'remoteEntry.js',
-        remotes: {
-          MFE1:
-            'MFE1@http://localhost:8083/remoteEntry.js',
-        },
-      }
-    ),
-    new HtmlWebpackPlugin({
-      template:
-        './public/index.html',
-    }),
-  ],
 };

@@ -9,18 +9,7 @@ function App() {
       <h1>
         Micro-Frontend Host
       </h1>
-      <div
-        style={{
-          margin: '10px',
-          padding: '10px',
-          width: '80%',
-          border:
-            '4px solid black',
-        }}>
-        <h3>
-          Navbar from MFE2
-        </h3>
-      </div>
+
       <div
         style={{
           margin: '10px',
@@ -35,19 +24,6 @@ function App() {
         <React.Suspense fallback='Loading Button'>
           <MFE1_Button />
         </React.Suspense>
-      </div>
-      <div
-        style={{
-          margin: '10px',
-          padding: '10px',
-          width: '80%',
-          border:
-            '4px solid black',
-        }}>
-        <h3>
-          Other Components
-          from MFE3
-        </h3>
       </div>
     </div>
   );
