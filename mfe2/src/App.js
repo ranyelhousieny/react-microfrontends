@@ -6,13 +6,49 @@ const MFE1_Button = React.lazy(
 function App() {
   return (
     <div>
-      <h1>MFE2</h1>
-      <div>
+      <h1>
+        Micro-Frontend Host
+      </h1>
+      <div
+        style={{
+          margin: '10px',
+          padding: '10px',
+          width: '80%',
+          border:
+            '4px solid black',
+        }}>
+        <h3>
+          Navbar from MFE2
+        </h3>
+      </div>
+      <div
+        style={{
+          margin: '10px',
+          padding: '10px',
+          width: '60%',
+          border:
+            '4px solid black',
+        }}>
+        <h3>
+          Button from MFE1
+        </h3>
         <React.Suspense fallback='Loading Button'>
           <MFE1_Button />
         </React.Suspense>
       </div>
-      <h2>MFE2</h2>
+      <div
+        style={{
+          margin: '10px',
+          padding: '10px',
+          width: '80%',
+          border:
+            '4px solid black',
+        }}>
+        <h3>
+          Other Components
+          from MFE3
+        </h3>
+      </div>
     </div>
   );
 }
